@@ -18,5 +18,8 @@ jobs:
         with:
           node-version: 22
 
-      - name: Node version
-        run: node --version
+      - name: Install deps
+        run: npm ci #same as npm install but here it means clean install
+
+      - name: Run tests
+        run: npm run test
